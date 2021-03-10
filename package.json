@@ -1,0 +1,14 @@
+{
+	"name": "responsive",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {},
+	"dependencies": {
+		"@babel/core": "^7.13.10",
+		"@babel/preset-env": "^7.13.10",
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.1.0",
+		"node-sass": "^5.0.0"
+	}
+}
