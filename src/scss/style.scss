@@ -1,4 +1,6 @@
+@import "./reset";
 @import "./variables";
+@import "./mixins";
 
 span {
     background-color: $black;
@@ -7,4 +9,9 @@ span {
 
 h1 {
     color: red;
+}
+
+section {
+    column-count: 1;
+    column-gap: none;
 }
