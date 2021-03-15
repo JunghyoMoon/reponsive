@@ -9,13 +9,24 @@ body {
     align-items: center;
 
     header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include footerAndHeader;
+
+        .title {
+            margin-left: 5%;
+        }
+
+        nav {
+            span {
+            }
+        }
+
+        ul {
+            margin-right: 5%;
+        }
     }
 
     footer {
+        @include footerAndHeader;
     }
 
     section {
