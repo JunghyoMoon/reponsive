@@ -2,16 +2,53 @@
 @import "./variables";
 @import "./mixins";
 
-span {
-    background-color: $black;
-    color: white;
-}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-h1 {
-    color: red;
-}
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-section {
-    column-count: 1;
-    column-gap: none;
+    footer {
+    }
+
+    section {
+        width: 87%;
+        column-count: 1;
+        column-gap: none;
+
+        @media screen and (min-width: 600px) {
+            column-count: 2;
+        }
+        @media screen and (min-width: 900px) {
+            column-count: 3;
+        }
+        @media screen and (min-width: 1200px) {
+            column-count: 4;
+        }
+        @media screen and (min-width: 1700px) {
+            column-count: 5;
+        }
+
+        .item {
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-family: "Times New Roman", Times, serif;
+                font-size: 30px;
+                font-weight: 400;
+            }
+        }
+    }
 }
