@@ -62,13 +62,16 @@ const js = () =>
         )
         .pipe(gulp.dest(routes.js.dest));
 
+const gulpImage = () =>
+    gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
+
 const liveReload = () => {
     gulp.watch(routes.pug.watch, pug);
     gulp.watch(routes.scss.watch, style);
     gulp.watch(routes.js.watch, js);
 };
 
-const prepare = gulp.series([clean]);
+const prepare = gulp.series([clean, gulpImage]);
 const assets = gulp.series([pug, style, js]);
 const live = gulp.parallel([webServer, liveReload]);
 
