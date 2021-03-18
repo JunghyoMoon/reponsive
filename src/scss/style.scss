@@ -15,6 +15,8 @@ body {
 
         .title {
             font-size: 3em;
+            position: relative;
+            left: 8%;
         }
 
         nav {
@@ -29,6 +31,11 @@ body {
 
         @media screen and (max-width: 900px) {
             flex-direction: column;
+
+            .title {
+                left: 0%;
+                margin-bottom: 5%;
+            }
         }
     }
 
